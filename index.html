@@ -3,55 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClawLabs 15-Minute Digital Product Funnel — Build & Launch Free</title>
-  <meta name="description" content="Build a complete digital product business in 15 minutes with free tools. No code required. From Google AI Studio to your own domain — live in minutes." />
+  <title>The 15-Minute Digital Product Funnel — Build & Launch Free with Cloudflare</title>
+  <meta name="description" content="Build a complete digital product business in 15 minutes with free tools. No code required. Google AI Studio → Vercel → Cloudflare → Gumroad. Zero monthly fees." />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #1a1a2e; background: #0f0f23; }
     .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 0 40px; text-align: center; }
-    header h1 { color: white; font-size: 2.5rem; margin-bottom: 10px; }
-    header .subtitle { color: #e0e0ff; font-size: 1.2rem; margin-bottom: 20px; }
-    .badge { background: rgba(255,255,255,0.2); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
-    .hero-price { background: #1a1a2e; border: 2px solid #667eea; border-radius: 16px; padding: 30px; margin: -20px 20px 40px; text-align: center; }
-    .hero-price .label { color: #667eea; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
+    header { background: linear-gradient(135deg, #f38020 0%, #f9a021 50%, #ff6b35 100%); padding: 60px 0 40px; text-align: center; }
+    header h1 { color: white; font-size: 2.5rem; margin-bottom: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+    header .subtitle { color: #fff8e8; font-size: 1.2rem; margin-bottom: 20px; }
+    .badge { background: rgba(255,255,255,0.2); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.3); }
+    .hero-price { background: #1a1a2e; border: 2px solid #f38020; border-radius: 16px; padding: 30px; margin: -20px 20px 40px; text-align: center; }
+    .hero-price .label { color: #f38020; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
     .hero-price .price { font-size: 3rem; font-weight: 700; color: white; }
     .hero-price .note { color: #888; font-size: 0.85rem; margin-top: 5px; }
     .content { background: white; padding: 40px 0; }
-    h2 { font-size: 1.8rem; color: #1a1a2e; margin: 30px 0 15px; border-left: 4px solid #667eea; padding-left: 15px; }
-    h3 { font-size: 1.2rem; color: #764ba2; margin: 20px 0 10px; }
+    h2 { font-size: 1.8rem; color: #1a1a2e; margin: 30px 0 15px; border-left: 4px solid #f38020; padding-left: 15px; }
+    h3 { font-size: 1.2rem; color: #e55c00; margin: 20px 0 10px; }
     p { margin-bottom: 15px; color: #444; }
     ul, ol { margin: 0 0 20px 25px; color: #444; }
     li { margin-bottom: 8px; }
-    .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 20px 0; }
-    .stack-item { background: #f8f9ff; border: 1px solid #e0e0ff; border-radius: 10px; padding: 12px; text-align: center; font-weight: 600; font-size: 0.9rem; color: #667eea; }
+    .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin: 20px 0; }
+    .stack-item { background: #fff8f0; border: 1px solid #ffd4a8; border-radius: 10px; padding: 12px; text-align: center; font-weight: 600; font-size: 0.88rem; color: #e55c00; }
     .stack-item .cost { display: block; font-size: 0.75rem; color: #44cc88; font-weight: 400; margin-top: 4px; }
+    .stack-item .orange { color: #f38020; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th { background: #667eea; color: white; padding: 10px; text-align: left; }
+    th { background: #f38020; color: white; padding: 10px; text-align: left; }
     td { padding: 10px; border-bottom: 1px solid #eee; }
-    tr:nth-child(even) { background: #f8f9ff; }
+    tr:nth-child(even) { background: #fff8f0; }
     .checklist-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; }
-    .checkbox { width: 20px; height: 20px; border: 2px solid #667eea; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
-    .code-block { background: #1a1a2e; color: #a8ff78; padding: 15px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; overflow-x: auto; margin: 15px 0; white-space: pre; }
-    .highlight-box { background: linear-gradient(135deg, #667eea20, #764ba220); border-left: 4px solid #667eea; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
-    .cta-section { background: linear-gradient(135deg, #667eea, #764ba2); text-align: center; padding: 60px 20px; color: white; }
+    .checkbox { width: 20px; height: 20px; border: 2px solid #f38020; border-radius: 4px; flex-shrink: 0; margin-top: 2px; background: #fff8f0; }
+    .code-block { background: #1a1a2e; color: #f9a021; padding: 15px 20px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; overflow-x: auto; margin: 15px 0; white-space: pre; }
+    .highlight-box { background: linear-gradient(135deg, #f3802020, #ff6b3520); border-left: 4px solid #f38020; padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .highlight-box strong { color: #e55c00; }
+    .flow-diagram { background: #fff8f0; border: 2px dashed #f38020; border-radius: 12px; padding: 25px; text-align: center; margin: 25px 0; font-size: 1.05rem; color: #e55c00; font-weight: 600; }
+    .flow-diagram span { color: #444; font-weight: 400; }
+    .product-card { background: white; border: 2px solid #ffd4a8; border-radius: 12px; padding: 20px; margin: 15px 0; }
+    .product-card h4 { color: #e55c00; margin-bottom: 8px; font-size: 1.1rem; }
+    .product-card .price-tag { background: #f38020; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-bottom: 10px; }
+    .cta-section { background: linear-gradient(135deg, #f38020, #ff6b35); text-align: center; padding: 60px 20px; color: white; }
     .cta-section h2 { color: white; border: none; padding: 0; font-size: 2rem; }
-    .cta-section p { color: #e0e0ff; font-size: 1.1rem; margin-bottom: 25px; }
-    .cta-btn { background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; font-size: 1.1rem; font-weight: 700; text-decoration: none; display: inline-block; transition: transform 0.2s; }
+    .cta-section p { color: #fff8e8; font-size: 1.1rem; margin-bottom: 25px; }
+    .cta-btn { background: white; color: #f38020; padding: 15px 40px; border-radius: 30px; font-size: 1.1rem; font-weight: 700; text-decoration: none; display: inline-block; transition: transform 0.2s; }
     .cta-btn:hover { transform: scale(1.05); }
-    .steps timeline { border-left: 2px solid #667eea; margin-left: 20px; padding-left: 30px; }
-    .step { margin-bottom: 30px; position: relative; }
-    .step::before { content: attr(data-min); position: absolute; left: -44px; top: 0; background: #667eea; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+    .step { margin-bottom: 30px; padding-left: 15px; border-left: 3px solid #ffd4a8; }
+    .step-num { display: inline-block; background: #f38020; color: white; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.8rem; font-weight: 700; margin-right: 10px; margin-bottom: 10px; }
     .faq-item { border-bottom: 1px solid #eee; padding: 15px 0; }
-    .faq-item h4 { color: #667eea; margin-bottom: 8px; }
+    .faq-item h4 { color: #e55c00; margin-bottom: 8px; }
+    .cloudflare-badge { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 15px 0; font-size: 0.85rem; color: #f38020; font-weight: 600; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+    .comparison .old { background: #fff0f0; border: 1px solid #ffcccc; border-radius: 10px; padding: 15px; }
+    .comparison .new { background: #f0fff4; border: 1px solid #a8ffb8; border-radius: 10px; padding: 15px; }
+    .comparison h5 { font-size: 0.85rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+    .comparison .old h5 { color: #cc4444; }
+    .comparison .new h5 { color: #44aa44; }
     footer { text-align: center; padding: 30px; color: #666; font-size: 0.85rem; background: #0f0f23; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .hero-price .price { font-size: 2.2rem; }
+      .comparison { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <div class="container">
-    <div class="badge">🚀 Zero Coding Required</div>
+    <div class="badge">🚀 Zero Coding Required &nbsp;|&nbsp; ⚡ 15 Minutes</div>
     <h1>The 15-Minute Digital Product Funnel</h1>
     <p class="subtitle">Build a complete business — landing page, checkout, delivery — with free tools</p>
     <div class="hero-price">
@@ -66,42 +84,59 @@
   <div class="container">
 
 <h2>🦞 What Is This?</h2>
-<p>This is the exact system we used to build ClawLabs — a complete digital product business with a landing page, payment processing, and automated delivery — using only free tools. <strong>We built the entire ClawLabs ecosystem in under 2 weeks.</strong></p>
-<p>No Stripe account needed. No WordPress. No monthly fees. Just tools that work together.</p>
+<p>This is the exact system we used to build ClawLabs — a complete digital product business with a landing page, payment processing, and automated delivery — using <strong>only free tools</strong>. No Stripe account needed. No WordPress. No monthly fees.</p>
+<p>We built the entire ClawLabs ecosystem in under 2 weeks. Now we're showing you exactly how.</p>
 
 <h2>⚡ The Stack (All Free)</h2>
 <div class="stack-grid">
   <div class="stack-item">Google AI Studio<span class="cost">Free tier</span></div>
   <div class="stack-item">GitHub<span class="cost">Free</span></div>
   <div class="stack-item">Vercel<span class="cost">Free tier</span></div>
+  <div class="stack-item">Cloudflare<span class="cost">Free DNS + SSL</span></div>
   <div class="stack-item">Supabase<span class="cost">Free tier</span></div>
   <div class="stack-item">Gumroad<span class="cost">Pay on sale</span></div>
-  <div class="stack-item">GoDaddy<span class="cost">~$15/yr</span></div>
+</div>
+
+<div class="cloudflare-badge">
+  ☁️ Cloudflare handles DNS — one dashboard for all your subdomains, free SSL, global CDN
 </div>
 
 <h2>🔧 The Flow</h2>
-<div class="code-block">Google AI Studio → GitHub → Vercel → GoDaddy → Gumroad
-                        ↓
-                   Supabase (leads + delivery)</div>
+<div class="flow-diagram">
+  Google AI Studio → GitHub → Vercel → <span>Cloudflare DNS →</span> Your Domain → Gumroad
+  <br/><span style="font-size:0.85rem;display:block;margin-top:8px;">Supabase (leads + delivery) runs quietly in the background</span>
+</div>
+
+<div class="comparison">
+  <div class="old">
+    <h5>❌ Old Way</h5>
+    <p style="font-size:0.9rem;margin:0;">WordPress + hosting + Stripe + domain registrar + email service + page builder = $50-200/mo before you make a single sale</p>
+  </div>
+  <div class="new">
+    <h5>✅ New Way</h5>
+    <p style="font-size:0.9rem;margin:0;">Google AI Studio + Vercel + Cloudflare + Gumroad + Supabase = <strong class="orange">$15/yr total</strong></p>
+  </div>
+</div>
 
 <h2>📋 Step-by-Step: Build It in 15 Minutes</h2>
 
-<div class="step" data-min="1-3">
-<h3>Minute 1–3: Build in Google AI Studio</h3>
+<div class="step">
+<span class="step-num">1</span><h3 style="display:inline;margin-left:8px;">Minute 1–3: Build in Google AI Studio</h3>
 <ol>
   <li>Go to <strong>aistudio.google.com</strong></li>
   <li>Start a new <strong>Applet</strong></li>
   <li>Design your landing page, checkout, or digital product</li>
+  <li>Use <strong>Gemini</strong> to help write the copy</li>
   <li>Click <strong>Deploy → Push to GitHub</strong></li>
 </ol>
 </div>
 
-<div class="step" data-min="4-6">
-<h3>Minute 4–6: Push to GitHub</h3>
+<div class="step">
+<span class="step-num">2</span><h3 style="display:inline;margin-left:8px;">Minute 4–6: Push to GitHub</h3>
 <ol>
   <li>Create a new repo: <code>your-product-name</code></li>
   <li>Make it <strong>Public</strong></li>
-  <li>Add a <code>vercel.json</code> file if needed:</li>
+  <li>Add a <code>vercel.json</code> file:</li>
 </ol>
 <div class="code-block">{
   "buildCommand": "npm run build",
@@ -110,8 +145,8 @@
 }</div>
 </div>
 
-<div class="step" data-min="7-10">
-<h3>Minute 7–10: Deploy to Vercel</h3>
+<div class="step">
+<span class="step-num">3</span><h3 style="display:inline;margin-left:8px;">Minute 7–10: Deploy to Vercel</h3>
 <ol>
   <li>Go to <strong>vercel.com → Add New → Project</strong></li>
   <li>Import your GitHub repo</li>
@@ -121,27 +156,30 @@
 <p>Your site is live at: <code>yourproject.vercel.app</code></p>
 </div>
 
-<div class="step" data-min="11-13">
-<h3>Minute 11–13: Connect Your Domain</h3>
+<div class="step">
+<span class="step-num">4</span><h3 style="display:inline;margin-left:8px;">Minute 11–13: Set Up Cloudflare DNS</h3>
 <ol>
-  <li>In <strong>Vercel → Project → Settings → Domains</strong></li>
-  <li>Add your domain (e.g. <code>yourdomain.com</code>)</li>
-  <li>Vercel gives you DNS records to add in GoDaddy:</li>
+  <li>Go to <strong>cloudflare.com</strong> → Sign up free</li>
+  <li>Add your domain: <code>yourdomain.com</code></li>
+  <li>Cloudflare gives you <strong>2 nameservers</strong></li>
+  <li>Go to your domain registrar (GoDaddy) → change nameservers to Cloudflare's</li>
+  <li>Back in Cloudflare → add DNS records pointing to Vercel:</li>
 </ol>
 <table>
   <tr><th>Type</th><th>Name</th><th>Value</th></tr>
-  <tr><td>A</td><td>@</td><td>216.198.79.1</td></tr>
-  <tr><td>CNAME</td><td>www</td><td>cname.vercel-dns.com</td></tr>
+  <tr><td>CNAME</td><td>www</td><td>yourproject.vercel.app</td></tr>
+  <tr><td>CNAME</td><td>@</td><td>yourproject.vercel.app <span style="color:#888;font-size:0.8rem;">(proxied)</span></td></tr>
 </table>
+<p style="font-size:0.9rem;color:#888;margin-top:8px;">💡 With Cloudflare, root domains work like subdomains — no awkward www redirect needed!</p>
 </div>
 
-<div class="step" data-min="14-15">
-<h3>Minute 14–15: Set Up Payments</h3>
+<div class="step">
+<span class="step-num">5</span><h3 style="display:inline;margin-left:8px;">Minute 14–15: Set Up Payments</h3>
 <ol>
   <li>Go to <strong>gumroad.com</strong> — free to join</li>
   <li>Create a product: "$9 PDF Guide", "$19 Template Pack"</li>
   <li>Copy your Gumroad product link</li>
-  <li>Add the link to your Vercel site</li>
+  <li>Add the link to your site</li>
 </ol>
 <p>Gumroad handles: credit cards, PDF delivery, refunds, receipts — automatically.</p>
 </div>
@@ -154,36 +192,72 @@
 <div class="checklist-item"><div class="checkbox"></div> Credit card (for GoDaddy domain — $15/yr)</div>
 
 <h3>Signups (All Free)</h3>
-<div class="checklist-item"><div class="checkbox"></div> Google AI Studio: aistudio.google.com</div>
-<div class="checklist-item"><div class="checkbox"></div> GitHub: github.com — create account + org</div>
-<div class="checklist-item"><div class="checkbox"></div> Vercel: vercel.com — sign up with GitHub</div>
-<div class="checklist-item"><div class="checkbox"></div> Supabase: supabase.com — free tier</div>
-<div class="checklist-item"><div class="checkbox"></div> GoDaddy: godaddy.com — buy domain</div>
-<div class="checklist-item"><div class="checkbox"></div> Gumroad: gumroad.com — free to join</div>
+<div class="checklist-item"><div class="checkbox"></div> <strong>Google AI Studio:</strong> aistudio.google.com</div>
+<div class="checklist-item"><div class="checkbox"></div> <strong>GitHub:</strong> github.com — create account + org</div>
+<div class="checklist-item"><div class="checkbox"></div> <strong>Vercel:</strong> vercel.com — sign up with GitHub</div>
+<div class="checklist-item"><div class="checkbox" style="border-color:#f38020;"></div> <strong>Cloudflare:</strong> cloudflare.com — free DNS + SSL + CDN</div>
+<div class="checklist-item"><div class="checkbox"></div> <strong>Supabase:</strong> supabase.com — free tier</div>
+<div class="checklist-item"><div class="checkbox"></div> <strong>Gumroad:</strong> gumroad.com — free to join</div>
 
 <h3>Build Steps</h3>
 <div class="checklist-item"><div class="checkbox"></div> Build your app in Google AI Studio</div>
 <div class="checklist-item"><div class="checkbox"></div> Push to GitHub</div>
-<div class="checklist-item"><div class="checkbox"></div> Import into Vercel</div>
-<div class="checklist-item"><div class="checkbox"></div> Test the .vercel.app URL</div>
-<div class="checklist-item"><div class="checkbox"></div> Add GoDaddy DNS records</div>
-<div class="checklist-item"><div class="checkbox"></div> Wait for DNS → test yourdomain.com</div>
-<div class="checklist-item"><div class="checkbox"></div> Create Gumroad product</div>
-<div class="checklist-item"><div class="checkbox"></div> Add Gumroad link to your site</div>
-<div class="checklist-item"><div class="checkbox"></div> Test full buy flow (buy from a friend!)</div>
+<div class="checklist-item"><div class="checkbox"></div> Import into Vercel → test .vercel.app URL</div>
+<div class="checklist-item"><div class="checkbox"></div> Sign up at Cloudflare → add your domain</div>
+<div class="checklist-item"><div class="checkbox"></div> Change GoDaddy nameservers to Cloudflare's</div>
+<div class="checklist-item"><div class="checkbox"></div> Add DNS records in Cloudflare → test yourdomain.com</div>
+<div class="checklist-item"><div class="checkbox"></div> Create Gumroad product → add link to your site</div>
+<div class="checklist-item"><div class="checkbox"></div> Test full buy flow</div>
 
 <h2>💰 Cost Breakdown</h2>
 <table>
   <tr><th>Item</th><th>Monthly</th><th>Year 1</th></tr>
   <tr><td>Domain (GoDaddy)</td><td>$1.25</td><td>$15</td></tr>
+  <tr><td>Cloudflare DNS</td><td>$0</td><td>$0</td></tr>
   <tr><td>Vercel (free tier)</td><td>$0</td><td>$0</td></tr>
   <tr><td>GitHub (free)</td><td>$0</td><td>$0</td></tr>
   <tr><td>Google AI Studio</td><td>$0</td><td>$0</td></tr>
   <tr><td>Supabase (free tier)</td><td>$0</td><td>$0</td></tr>
   <tr><td>Gumroad (pay on sale)</td><td>$0</td><td>$0</td></tr>
   <tr><td>OpenRouter API (optional)</td><td>$0–5</td><td>$0–60</td></tr>
-  <tr style="font-weight:700;background:#f8f9ff"><td>Total</td><td>$1.25</td><td>$15</td></tr>
+  <tr style="font-weight:700;background:#fff8f0;"><td>Total</td><td>$1.25</td><td>$15</td></tr>
 </table>
+
+<h2>🚀 What You Can Build</h2>
+
+<div class="product-card">
+<h4>💼 Product Funnels in Minutes</h4>
+<span class="price-tag">$1–$10K sites</span>
+<p>Most people know how to build websites — but nobody shows you how to DEPLOY them. We do. In 15 minutes, you can have a live, selling, payment-processing product funnel. No code. No monthly fees.</p>
+</div>
+
+<div class="product-card">
+<h4>🛒 Digital Product Stores</h4>
+<span class="price-tag">$9–$99 products</span>
+<p>E-books, templates, checklists, swipe files, guides. Build it in Google AI Studio, deploy to Vercel, sell via Gumroad. Your own digital storefront for $15/yr total.</p>
+</div>
+
+<div class="product-card">
+<h4>📧 Lead Magnets + Email Capture</h4>
+<span class="price-tag">Build your list</span>
+<p>Capture emails with a beautiful landing page, deliver a free PDF instantly via Gumroad, follow up with your paid products. Complete funnel, free to run.</p>
+</div>
+
+<div class="product-card">
+<h4>🤖 AI Agent Products</h4>
+<span class="price-tag">Recurring revenue</span>
+<p>Sell access to AI agents, bots, or automation workflows. Build the agent in OpenClaw, create a landing page in Google AI Studio, sell subscriptions via LemonSqueezy.</p>
+</div>
+
+<div class="highlight-box">
+<strong>💡 What We Built with This Stack:</strong>
+<ul>
+  <li>🦞 <strong>ClawLabs Setup Guide</strong> — clawsetupguide.com</li>
+  <li>📄 <strong>This page</strong> — showing exactly how it's done</li>
+  <li>🤖 <strong>ArtClaw AI Agent</strong> — makes memes daily at 6 AM automatically</li>
+</ul>
+All on the $15/yr stack. All live and making money.
+</div>
 
 <h2>❓ FAQ</h2>
 
@@ -193,33 +267,28 @@
 </div>
 
 <div class="faq-item">
-<h4>"What if Google AI Studio doesn't export my code?"</h4>
-<p>You can download the built files and push them to GitHub manually. Most AI Studio applets export cleanly to a standard Vite/React project.</p>
-</div>
-
-<div class="faq-item">
-<h4>"Can I use a different payment processor?"</h4>
-<p>Yes — Gumroad is the easiest (zero monthly fee, pays on sale only). Alternatives: LemonSqueezy, Stripe (requires more setup).</p>
+<h4>"Why Cloudflare instead of GoDaddy DNS?"</h4>
+<p>GoDaddy DNS doesn't support CNAME records on root domains (the naked yourdomain.com). Cloudflare does — and it gives you free SSL, global CDN, and one dashboard for all your subdomains. You can add new products anytime without touching your registrar.</p>
 </div>
 
 <div class="faq-item">
 <h4>"What's the catch with free tiers?"</h4>
-<p>Each tool has limits, but for a new product they're more than enough. Vercel free tier handles 100K visitors/month. Supabase free tier handles 500MB database. Gumroad takes 10% only when you make a sale.</p>
+<p>Each tool has limits, but for a new product they're more than enough. Vercel handles 100K visitors/mo. Supabase handles 500MB database. Gumroad takes 10% only when you make a sale — nothing upfront.</p>
 </div>
 
 <div class="faq-item">
-<h4>"Can I sell a recurring subscription?"</h4>
-<p>Gumroad doesn't do recurring, but LemonSqueezy and Stripe do. For $9/mo subscriptions, consider LemonSqueezy — similar free tier.</p>
+<h4>"Can I add more products later?"</h4>
+<p>Yes! That's the beauty of Cloudflare DNS. Add a new subdomain anytime — shop.yourdomain.com, funnel.yourdomain.com, blog.yourdomain.com — all pointing to Vercel projects. One dashboard, unlimited products.</p>
 </div>
 
-<div class="highlight-box">
-<strong>💡 What We Built with This Stack:</strong>
-<ul>
-  <li>🦞 <strong>ClawLabs Setup Guide</strong> — clawsetupguide.com (Vercel + GoDaddy)</li>
-  <li>🤖 <strong>ArtClaw AI Agent</strong> — makes memes daily at 6 AM automatically</li>
-  <li>📊 <strong>ClawLabs Art</strong> — clawlabs.art (meme marketplace)</li>
-</ul>
-All built in under 2 weeks. All on the free stack.
+<div class="faq-item">
+<h4>"What if I want recurring subscriptions?"</h4>
+<p>Gumroad doesn't do recurring, but LemonSqueezy does — similar free tier, $9/mo for subscriptions. Same stack, just swap the payment processor.</p>
+</div>
+
+<div class="faq-item">
+<h4>"Can I use this for client work?"</h4>
+<p>Absolutely. Build a $1,000–$10,000 site for a client in 15 minutes, point it to their domain via Cloudflare, collect payment via Gumroad. You're not just building your own products — you're building an agency.</p>
 </div>
 
   </div>
@@ -232,7 +301,7 @@ All built in under 2 weeks. All on the free stack.
 </div>
 
 <footer>
-  <p>🦞 Built by ClawLabs Network, LLC &nbsp;|&nbsp; Part of the 15-Minute Funnel System</p>
+  <p>🦞 Built by ClawLabs Network, LLC &nbsp;|&nbsp; The 15-Minute Funnel System</p>
   <p style="margin-top:8px;font-size:0.75rem;color:#555;">No coding required. No monthly fees. Just results.</p>
 </footer>
 
